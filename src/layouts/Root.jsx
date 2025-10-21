@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "./Header";
-import LatestNews from "./LatestNews";
-import Navbar from "./Navbar";
-import LeftAside from "./LeftAside";
-import RightAside from "./RightAside";
+import Header from "../Components/Header";
+import LatestNews from "../Components/LatestNews";
+import Navbar from "../Components/Navbar";
+import LeftAside from "../Components/LeftAside";
+import RightAside from "../Components/RightAside";
 import { Outlet } from "react-router";
 
 const Root = () => {
@@ -19,13 +19,13 @@ const Root = () => {
         </section>
       </header>
       <main className="w-11/12 mx-auto grid grid-cols-12 my-2 gap-6">
-        <aside className="col-span-3">
+        <aside className="col-span-3 sticky top-0 h-fit">
           <LeftAside></LeftAside>
         </aside>
         <section className="col-span-6">
           <Outlet></Outlet>
         </section>
-        <aside className="col-span-3">
+        <aside className="col-span-3 sticky top-0 h-fit">
           <RightAside></RightAside>
         </aside>
       </main>
